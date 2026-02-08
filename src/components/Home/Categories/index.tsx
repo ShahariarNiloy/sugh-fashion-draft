@@ -1,10 +1,10 @@
 "use client";
 import Link from "next/link";
 import data from "./categoryData";
+
 const Categories = () => {
   return (
-    <section className="overflow-hidden py-16 border-t border-gray-2">
-      \n{" "}
+    <section className="py-14">
       <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
         {/* Section title */}
         <div className="text-center mb-10">
@@ -16,40 +16,39 @@ const Categories = () => {
           </h2>
         </div>
 
-        {/* Category Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {data.map((item) => (
+        {/* Staggered horizontal strip */}
+        <div className="flex items-end gap-4 overflow-x-auto snap-x snap-mandatory no-scrollbar -mx-4 px-4 sm:-mx-8 sm:px-8 xl:mx-0 xl:px-0 pb-2">
+          {data.map((item, index) => (
             <Link
               key={item.id}
               href="/shop-with-sidebar"
-              className="group relative aspect-[3/4] overflow-hidden rounded-xl shadow-sm hover:shadow-xl transition-all duration-300"
+              className={`group relative flex-shrink-0 w-[150px] sm:w-[170px] xl:w-0 xl:flex-1 overflow-hidden rounded-2xl snap-start transition-transform duration-300 hover:-translate-y-2 ${
+                index % 2 === 0
+                  ? "h-[280px] sm:h-[320px]"
+                  : "h-[240px] sm:h-[270px]"
+              }`}
             >
+              {/* Image */}
               <img
                 src={item.img}
                 alt={item.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark/70 via-dark/20 to-transparent" />
-              <div className="absolute inset-0 flex flex-col items-center justify-end pb-5">
-                <span className="text-white text-base font-semibold tracking-wide drop-shadow-md">
+
+              {/* Gradient overlay - bottom only */}
+              <div className="absolute inset-0 bg-gradient-to-t from-dark/70 via-dark/10 to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-100" />
+
+              {/* Content at bottom */}
+              <div className="absolute inset-x-0 bottom-0 p-4">
+                <p className="text-white/60 text-xs font-medium uppercase tracking-wider mb-1">
+                  {item.count} Products
+                </p>
+                <h3 className="text-white font-semibold text-lg leading-tight">
                   {item.title}
-                </span>
-                <span className="flex items-center gap-1 text-white/80 text-xs uppercase tracking-widest mt-1.5 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                  Shop
-                  <svg
-                    className="w-3 h-3"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </span>
+                </h3>
+
+                {/* Animated underline */}
+                <div className="w-0 h-0.5 bg-white rounded-full mt-2.5 transition-all duration-300 group-hover:w-full" />
               </div>
             </Link>
           ))}

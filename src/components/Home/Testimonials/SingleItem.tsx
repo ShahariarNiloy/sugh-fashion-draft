@@ -4,7 +4,7 @@ import Image from "next/image";
 const SingleItem = ({ testimonial }: { testimonial: Testimonial }) => {
   return (
     <div className="bg-white rounded-2xl py-8 px-6 sm:px-8 shadow-sm hover:shadow-xl hover:shadow-blue/5 transition-all duration-300">
-      \n {/* Quote icon */}
+      {/* Quote icon */}
       <div className="mb-5">
         <svg
           className="w-8 h-8 text-blue/20"

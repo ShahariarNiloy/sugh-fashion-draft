@@ -49,7 +49,7 @@ const Newsletter = () => {
                     name="email"
                     id="email"
                     placeholder="Enter your email address"
-                    className="flex-1 bg-white/15 border border-white/25 outline-none rounded-full text-white placeholder:text-white/60 py-4 px-6 focus:bg-white/25 focus:border-white/40 transition-all duration-300"
+                    className="flex-1 border border-white/25 outline-none rounded-full text-white placeholder:text-white/60 py-4 px-6 bg-white/25 border-white/40 transition-all duration-300"
                   />
                   <button
                     type="submit"

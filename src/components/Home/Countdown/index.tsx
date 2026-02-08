@@ -126,7 +126,7 @@ const CounDown = () => {
           <div className="hidden sm:block absolute -right-20 -top-20 w-96 h-96 bg-blue/5 rounded-full blur-3xl" />
           <div className="hidden lg:block absolute right-8 xl:right-24 bottom-8 xl:bottom-12 -z-1 w-[320px] h-[360px] overflow-hidden rounded-2xl shadow-2xl">
             <img
-              src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=500&h=600&fit=crop"
+              src="https://images.unsplash.com/photo-1595621853511-e111057d93b2?w=500&h=600&fit=crop&q=80"
               alt="Festive collection"
               className="w-full h-full object-cover"
             />

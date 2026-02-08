@@ -8,8 +8,8 @@ const featureData = [
   },
   {
     img: "/images/icons/icon-02.svg",
-    title: "Easy Returns",
-    description: "7 days return policy",
+    title: "Quality Assured",
+    description: "Handpicked with care",
   },
   {
     img: "/images/icons/icon-03.svg",

@@ -1,7 +1,6 @@
 import Newsletter from "../Common/Newsletter";
 import BestSeller from "./BestSeller";
 import Categories from "./Categories";
-import CounDown from "./Countdown";
 import Hero from "./Hero";
 import InstagramFeed from "./InstagramFeed";
 import LatestBlog from "./LatestBlog";
@@ -16,10 +15,9 @@ const Home = () => {
       <Hero />
       <Categories />
       <NewArrival />
-      <BestSeller />
       <ShopByOccasion />
+      <BestSeller />
       <PromoBanner />
-      <CounDown />
       <Testimonials />
       <LatestBlog />
       <InstagramFeed />

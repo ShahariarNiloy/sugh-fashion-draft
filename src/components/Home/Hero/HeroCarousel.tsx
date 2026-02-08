@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 const slides = [
   {
     image:
-      "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1600&h=900&fit=crop",
+      "https://images.unsplash.com/photo-1769275061102-55435b2b0f71?w=1600&h=900&fit=crop&q=80",
     subtitle: "New Collection 2026",
     title: "Elegance Redefined",
     description: "Discover our latest collection of handcrafted ethnic wear",
@@ -19,7 +19,7 @@ const slides = [
   },
   {
     image:
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1600&h=900&fit=crop",
+      "https://images.unsplash.com/photo-1763971922538-5802acdd48b8?w=1600&h=900&fit=crop&q=80",
     subtitle: "Festive Season",
     title: "Celebrate in Style",
     description: "Exquisite lehengas and sarees for every occasion",
@@ -28,7 +28,7 @@ const slides = [
   },
   {
     image:
-      "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1600&h=900&fit=crop",
+      "https://images.unsplash.com/photo-1756483510821-424b7f6e44b0?w=1600&h=900&fit=crop&q=80",
     subtitle: "Limited Edition",
     title: "Designer Exclusives",
     description: "Curated pieces from India's finest artisans",
@@ -37,7 +37,7 @@ const slides = [
   },
   {
     image:
-      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=1600&h=900&fit=crop",
+      "https://images.unsplash.com/photo-1503160865267-af4660ce7bf2?w=1600&h=900&fit=crop&q=80",
     subtitle: "Summer Essentials",
     title: "Light & Breezy",
     description: "Cotton kurtis perfect for everyday elegance",

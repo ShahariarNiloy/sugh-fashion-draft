@@ -61,7 +61,7 @@ const Footer = () => {
                       fill="#3C50E0"
                     />
                   </svg>
-                  +91 98765-43210
+                  +91 93190-81613
                 </a>
               </li>
 
@@ -134,7 +134,9 @@ const Footer = () => {
               </a>
 
               <a
-                href="#"
+                href="https://instagram.com/sughfashion"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram Social Link"
                 className="flex ease-out duration-200 hover:text-blue"
               >
@@ -243,7 +245,7 @@ const Footer = () => {
               </li>
               <li>
                 <a className="ease-out duration-200 hover:text-blue" href="#">
-                  Refund Policy
+                  Shipping Policy
                 </a>
               </li>
               <li>
@@ -265,17 +267,25 @@ const Footer = () => {
           </div>
 
           <div className="w-full sm:w-auto">
-            <h2 className="mb-7.5 text-custom-1 font-medium text-dark lg:text-right">
-              About Sugh Fashion
-            </h2>
+            <div className="flex items-center gap-3 mb-7.5 lg:justify-end">
+              <img
+                src="/images/logo/logo.jpg"
+                alt="Sugh Fashion"
+                className="w-12 h-12 rounded-full object-cover"
+              />
+              <div>
+                <h2 className="text-custom-1 font-medium text-dark">SUGH</h2>
+                <p className="text-xs text-body">Where Comfort Meets Grace</p>
+              </div>
+            </div>
 
             <p className="lg:text-right text-custom-sm mb-4 max-w-[280px] lg:ml-auto">
-              Elegance in Every Thread - Discover the finest collection of Indian ethnic wear,
-              handcrafted with love and tradition.
+              India&apos;s 1st Affordable Homemade Brand. Providing Comfort,
+              Quality, Trust worldwide.
             </p>
 
             <div className="lg:text-right">
-              <p className="font-medium text-dark mb-2">We Ship Across India</p>
+              <p className="font-medium text-dark mb-2">DM or Call: +91 93190-81613</p>
               <p className="text-custom-sm">Free shipping on orders above ₹999</p>
             </div>
           </div>
