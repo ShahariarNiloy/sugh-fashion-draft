@@ -1,12 +1,11 @@
 "use client";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { useCallback, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import testimonialsData from "./testimonialsData";
-import Image from "next/image";
 
 // Import Swiper styles
-import "swiper/css/navigation";
 import "swiper/css";
+import "swiper/css/navigation";
 import SingleItem from "./SingleItem";
 
 const Testimonials = () => {
@@ -23,33 +22,30 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="overflow-hidden pb-16.5">
+    <section className="overflow-hidden py-16">
       <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
         <div className="">
-          <div className="swiper testimonial-carousel common-carousel p-5">
-            {/* <!-- section title --> */}
+          <div className="swiper testimonial-carousel common-carousel">
+            {/* Section title */}
             <div className="mb-10 flex items-center justify-between">
               <div>
-                <span className="flex items-center gap-2.5 font-medium text-dark mb-1.5">
-                  <Image
-                    src="/images/icons/icon-08.svg"
-                    alt="icon"
-                    width={17}
-                    height={17}
-                  />
-                  Testimonials
+                <span className="inline-block text-custom-xs font-medium uppercase tracking-wider text-blue mb-2">
+                  What They Say
                 </span>
                 <h2 className="font-semibold text-xl xl:text-heading-5 text-dark">
-                  User Feedbacks
+                  Customer Reviews
                 </h2>
               </div>
 
-              <div className="flex items-center gap-3">
-                <div onClick={handlePrev} className="swiper-button-prev">
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={handlePrev}
+                  className="w-10 h-10 rounded-full border border-gray-3 flex items-center justify-center text-dark-4 hover:bg-dark hover:border-dark hover:text-white transition-all duration-200"
+                >
                   <svg
                     className="fill-current"
-                    width="24"
-                    height="24"
+                    width="20"
+                    height="20"
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -61,13 +57,16 @@ const Testimonials = () => {
                       fill=""
                     />
                   </svg>
-                </div>
+                </button>
 
-                <div onClick={handleNext} className="swiper-button-next">
+                <button
+                  onClick={handleNext}
+                  className="w-10 h-10 rounded-full border border-gray-3 flex items-center justify-center text-dark-4 hover:bg-dark hover:border-dark hover:text-white transition-all duration-200"
+                >
                   <svg
                     className="fill-current"
-                    width="24"
-                    height="24"
+                    width="20"
+                    height="20"
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +78,7 @@ const Testimonials = () => {
                       fill=""
                     />
                   </svg>
-                </div>
+                </button>
               </div>
             </div>
 
@@ -94,7 +93,6 @@ const Testimonials = () => {
                 },
                 1000: {
                   slidesPerView: 2,
-                  // spaceBetween: 4,
                 },
                 // when window width is >= 768px
                 1200: {

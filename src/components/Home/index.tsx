@@ -1,12 +1,14 @@
-import React from "react";
-import Hero from "./Hero";
+import Newsletter from "../Common/Newsletter";
+import BestSeller from "./BestSeller";
 import Categories from "./Categories";
+import CounDown from "./Countdown";
+import Hero from "./Hero";
+import InstagramFeed from "./InstagramFeed";
+import LatestBlog from "./LatestBlog";
 import NewArrival from "./NewArrivals";
 import PromoBanner from "./PromoBanner";
-import BestSeller from "./BestSeller";
-import CounDown from "./Countdown";
+import ShopByOccasion from "./ShopByOccasion";
 import Testimonials from "./Testimonials";
-import Newsletter from "../Common/Newsletter";
 
 const Home = () => {
   return (
@@ -14,10 +16,13 @@ const Home = () => {
       <Hero />
       <Categories />
       <NewArrival />
-      <PromoBanner />
       <BestSeller />
+      <ShopByOccasion />
+      <PromoBanner />
       <CounDown />
       <Testimonials />
+      <LatestBlog />
+      <InstagramFeed />
       <Newsletter />
     </main>
   );

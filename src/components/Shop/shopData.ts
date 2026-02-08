@@ -37,8 +37,8 @@ const shopData: Product[] = [
   {
     title: "Embroidered Lehenga",
     reviews: 32,
-    price: 24999.0,
-    discountedPrice: 18999.0,
+    price: 2499.0,
+    discountedPrice: 1899.0,
     id: 3,
     imgs: {
       thumbnails: [

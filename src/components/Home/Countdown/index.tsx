@@ -1,6 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const CounDown = () => {
   const [days, setDays] = useState(0);
@@ -27,99 +26,105 @@ const CounDown = () => {
   }, []);
 
   return (
-    <section className="overflow-hidden py-20">
+    <section className="overflow-hidden py-16 bg-gray-1">
       <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
-        <div className="relative overflow-hidden z-1 rounded-lg bg-[#FFF1F2] p-4 sm:p-7.5 lg:p-10 xl:p-15">
-          <div className="max-w-[422px] w-full">
-            <span className="block font-medium text-custom-1 text-blue mb-2.5">
+        <div className="relative overflow-hidden z-1 rounded-2xl bg-gradient-to-br from-blue-light-5 via-white to-blue-light-4 p-6 sm:p-10 lg:p-14 xl:p-16">
+          <div className="max-w-[450px] w-full">
+            <span className="inline-block font-semibold text-sm text-blue uppercase tracking-wider mb-3">
               Limited Time Offer!
             </span>
 
-            <h2 className="font-bold text-dark text-xl lg:text-heading-4 xl:text-heading-3 mb-3">
+            <h2 className="font-bold text-dark text-2xl lg:text-3xl xl:text-4xl mb-4 leading-tight">
               Festive Season Sale
             </h2>
 
-            <p>Get ready for the celebrations with our exclusive designer collection at unbeatable prices.</p>
+            <p className="text-dark-3 text-base leading-relaxed">
+              Get ready for the celebrations with our exclusive designer
+              collection at unbeatable prices.
+            </p>
 
-            {/* <!-- Countdown timer --> */}
-            <div
-              className="flex flex-wrap gap-6 mt-6"
-              x-data="timer()"
-              x-init="countdown()"
-            >
-              {/* <!-- timer day --> */}
-              <div>
-                <span
-                  className="min-w-[64px] h-14.5 font-semibold text-xl lg:text-3xl text-dark rounded-lg flex items-center justify-center bg-white shadow-2 px-4 mb-2"
-                  x-text="days"
-                >
-                  {" "}
-                  {days < 10 ? "0" + days : days}{" "}
-                </span>
-                <span className="block text-custom-sm text-dark text-center">
+            {/* Countdown timer */}
+            <div className="flex flex-wrap gap-4 mt-8">
+              {/* Timer day */}
+              <div className="text-center">
+                <div className="min-w-[72px] h-[72px] font-bold text-2xl lg:text-3xl text-dark rounded-xl flex items-center justify-center bg-white shadow-lg border border-gray-2">
+                  {days < 10 ? "0" + days : days}
+                </div>
+                <span className="block text-xs font-medium text-dark-4 uppercase tracking-wider mt-2">
                   Days
                 </span>
               </div>
 
-              {/* <!-- timer hours --> */}
-              <div>
-                <span
-                  className="min-w-[64px] h-14.5 font-semibold text-xl lg:text-3xl text-dark rounded-lg flex items-center justify-center bg-white shadow-2 px-4 mb-2"
-                  x-text="hours"
-                >
-                  {" "}
-                  {hours < 10 ? "0" + hours : hours}{" "}
-                </span>
-                <span className="block text-custom-sm text-dark text-center">
+              {/* Separator */}
+              <div className="flex items-center text-2xl font-bold text-dark-4 pb-6">
+                :
+              </div>
+
+              {/* Timer hours */}
+              <div className="text-center">
+                <div className="min-w-[72px] h-[72px] font-bold text-2xl lg:text-3xl text-dark rounded-xl flex items-center justify-center bg-white shadow-lg border border-gray-2">
+                  {hours < 10 ? "0" + hours : hours}
+                </div>
+                <span className="block text-xs font-medium text-dark-4 uppercase tracking-wider mt-2">
                   Hours
                 </span>
               </div>
 
-              {/* <!-- timer minutes --> */}
-              <div>
-                <span
-                  className="min-w-[64px] h-14.5 font-semibold text-xl lg:text-3xl text-dark rounded-lg flex items-center justify-center bg-white shadow-2 px-4 mb-2"
-                  x-text="minutes"
-                >
-                  {minutes < 10 ? "0" + minutes : minutes}{" "}
-                </span>
-                <span className="block text-custom-sm text-dark text-center">
+              {/* Separator */}
+              <div className="flex items-center text-2xl font-bold text-dark-4 pb-6">
+                :
+              </div>
+
+              {/* Timer minutes */}
+              <div className="text-center">
+                <div className="min-w-[72px] h-[72px] font-bold text-2xl lg:text-3xl text-dark rounded-xl flex items-center justify-center bg-white shadow-lg border border-gray-2">
+                  {minutes < 10 ? "0" + minutes : minutes}
+                </div>
+                <span className="block text-xs font-medium text-dark-4 uppercase tracking-wider mt-2">
                   Minutes
                 </span>
               </div>
 
-              {/* <!-- timer seconds --> */}
-              <div>
-                <span
-                  className="min-w-[64px] h-14.5 font-semibold text-xl lg:text-3xl text-dark rounded-lg flex items-center justify-center bg-white shadow-2 px-4 mb-2"
-                  x-text="seconds"
-                >
-                  {seconds < 10 ? "0" + seconds : seconds}{" "}
-                </span>
-                <span className="block text-custom-sm text-dark text-center">
+              {/* Separator */}
+              <div className="flex items-center text-2xl font-bold text-dark-4 pb-6">
+                :
+              </div>
+
+              {/* Timer seconds */}
+              <div className="text-center">
+                <div className="min-w-[72px] h-[72px] font-bold text-2xl lg:text-3xl text-blue rounded-xl flex items-center justify-center bg-white shadow-lg border border-blue/20">
+                  {seconds < 10 ? "0" + seconds : seconds}
+                </div>
+                <span className="block text-xs font-medium text-dark-4 uppercase tracking-wider mt-2">
                   Seconds
                 </span>
               </div>
             </div>
-            {/* <!-- Countdown timer ends --> */}
 
             <a
               href="#"
-              className="inline-flex font-medium text-custom-sm text-white bg-blue py-3 px-9.5 rounded-md ease-out duration-200 hover:bg-blue-dark mt-7.5"
+              className="inline-flex items-center gap-2 font-semibold text-sm text-white bg-blue py-3.5 px-8 rounded-full shadow-lg hover:bg-blue-dark hover:shadow-xl transition-all duration-300 mt-8 group"
             >
               Shop Collection
+              <svg
+                className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
             </a>
           </div>
 
-          {/* <!-- bg shapes --> */}
-          <Image
-            src="/images/countdown/countdown-bg.png"
-            alt="bg shapes"
-            className="hidden sm:block absolute right-0 bottom-0 -z-1"
-            width={737}
-            height={482}
-          />
-          <div className="hidden lg:block absolute right-4 xl:right-33 bottom-4 xl:bottom-10 -z-1 w-[350px] h-[376px] overflow-hidden rounded-lg">
+          {/* Decorative background */}
+          <div className="hidden sm:block absolute -right-20 -top-20 w-96 h-96 bg-blue/5 rounded-full blur-3xl" />
+          <div className="hidden lg:block absolute right-8 xl:right-24 bottom-8 xl:bottom-12 -z-1 w-[320px] h-[360px] overflow-hidden rounded-2xl shadow-2xl">
             <img
               src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=500&h=600&fit=crop"
               alt="Festive collection"
